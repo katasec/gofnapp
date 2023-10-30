@@ -33,7 +33,7 @@ The application is enclosed in the [func1](./func1/) folder in [hello.go](https:
 
 ## host.json
 
-The [host.json](https://github.com/katasec/gofnapp/blob/main/host.json) file in the root tells the Azure Function runtime how to kick off the app:
+The [host.json](https://github.com/katasec/gofnapp/blob/main/host.json) file in the root tells the Azure Function runtime the name and path to the binary to run:
 
 ```json
   "customHandler": {
