@@ -31,9 +31,9 @@ The application is enclosed in the [func1](./func1/) folder in `hello.go`. It us
 	mux.HandleFunc(route, helloHandler)
 ```
 
-# Host.json
+# host.json
 
-The host.json file tells the Azure Function runtime how to kick off the app:
+The host.json file in the root tells the Azure Function runtime how to kick off the app:
 
 ```
   "customHandler": {
@@ -48,3 +48,6 @@ The host.json file tells the Azure Function runtime how to kick off the app:
   }
 ```
 
+# function.json
+
+The `function.json` in the `func1` directory tells the Azure function runtime to use an `httpTrigger` as the event to trigger any request/response for the `func1` functions app.
