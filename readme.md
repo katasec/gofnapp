@@ -33,9 +33,9 @@ The application is enclosed in the [func1](./func1/) folder in `hello.go`. It us
 
 # host.json
 
-The host.json file in the root tells the Azure Function runtime how to kick off the app:
+The [host.json](https://github.com/katasec/gofnapp/blob/main/host.json) file in the root tells the Azure Function runtime how to kick off the app:
 
-```
+```json
   "customHandler": {
     "enableForwardingHttpRequest": true,
     "description": {
@@ -50,4 +50,26 @@ The host.json file in the root tells the Azure Function runtime how to kick off 
 
 # function.json
 
-The `function.json` in the `func1` directory tells the Azure function runtime to use an `httpTrigger` as the event to trigger any request/response for the `func1` functions app.
+The [function.json](https://github.com/katasec/gofnapp/blob/main/func1/function.json) file in the `func1` directory tells the Azure function runtime to use an `httpTrigger` binding as the event to trigger any request/response for the `func1` functions app:
+
+```json
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    }
+  ]
+}
+```
