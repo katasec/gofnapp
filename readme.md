@@ -23,7 +23,7 @@ This repo is an example of how we might create an [Microsoft Azure Function](htt
 
 ## App details
 
-The application is enclosed in the [func1](./func1/) folder in `hello.go`. It uses a standard `http.ServeMux` with a single registered route:
+The application is enclosed in the [func1](./func1/) folder in [hello.go](https://github.com/katasec/gofnapp/blob/main/func1/hello.go). It uses a standard `http.ServeMux` with a single registered route:
 
 ```go
 	mux := http.NewServeMux()
