@@ -1,0 +1,17 @@
+{
+  "version": "2.0",
+  "extensionBundle": {
+    "id": "Microsoft.Azure.Functions.ExtensionBundle",
+    "version": "[3.*, 4.0.0)"
+  },
+  "customHandler": {
+    "enableForwardingHttpRequest": true,
+    "description": {
+      "defaultExecutablePath": "func1/func1",
+      "workingDirectory": "func1",
+      "arguments": [
+
+      ]
+    }
+  }
+}
