@@ -1,6 +1,6 @@
 # Overview
 
-This repo is an example of how we might create a [Microsoft Azure Function](https://azure.microsoft.com/en-au/products/functions) using [Go language](https://go.dev/). Go lang doesn't have an existing template whilst using [Azure Functions Core Tools](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=macos%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-csharp#install-the-azure-functions-core-tools). As such we need to use a "custom handler" to run Go lang applications either locally or in the cloud.
+This repo is an example of how we might create an [Microsoft Azure Function](https://azure.microsoft.com/en-au/products/functions) using [Go language](https://go.dev/). Go lang doesn't have an existing template whilst using [Azure Functions Core Tools](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=macos%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-csharp#install-the-azure-functions-core-tools). As such we need to use a "custom handler" to run Go lang applications either locally or in the cloud.
 
 
 # Prerequisites
