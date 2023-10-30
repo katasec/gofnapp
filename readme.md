@@ -39,8 +39,8 @@ The [host.json](https://github.com/katasec/gofnapp/blob/main/host.json) file in 
   "customHandler": {
     "enableForwardingHttpRequest": true,
     "description": {
-      "defaultExecutablePath": "func1/func1",
-      "workingDirectory": "func1",
+      "defaultExecutablePath": "out/func1",
+      "workingDirectory": "out",
       "arguments": [
 
       ]
