@@ -17,12 +17,7 @@ func main() {
 	mux.HandleFunc(route, helloHandler)
 
 	// Get Listen address from Env: FUNCTIONS_CUSTOMHANDLER_PORT
-	listenAddr := ":8080"
-	port, _ := os.LookupEnv("FUNCTIONS_CUSTOMHANDLER_PORT")
-	fmt.Println("FUNCTIONS_CUSTOMHANDLER_PORT is: " + port)
-	if val, ok := os.LookupEnv("FUNCTIONS_CUSTOMHANDLER_PORT"); ok {
-		listenAddr = ":" + val
-	}
+	listenAddr := getListenAddr()
 	fmt.Printf("About to listen on %s. Go to https://127.0.0.1%s/", listenAddr, listenAddr)
 
 	// Start Server
@@ -38,6 +33,16 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, message)
 }
 
+func getListenAddr() string {
+	listenAddr := ":8080"
+	port, _ := os.LookupEnv("FUNCTIONS_CUSTOMHANDLER_PORT")
+	fmt.Println("FUNCTIONS_CUSTOMHANDLER_PORT is: " + port)
+	if val, ok := os.LookupEnv("FUNCTIONS_CUSTOMHANDLER_PORT"); ok {
+		listenAddr = ":" + val
+	}
+
+	return listenAddr
+}
 func getDirName() string {
 	cwd, err := os.Getwd()
 	if err != nil {
